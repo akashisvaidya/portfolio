@@ -25,9 +25,8 @@
   <body>
     <div class="wrapper">
       <!-- navbar -->
-     
-      <nav class="navbar bg-light navbar-expand-md fixed-top">
-        <div class="container-fluid">
+     <div id="navbar"><nav class="navbar bg-light navbar-expand-md fixed-top">
+        <div class="container-fluid" >
           <a class="navbar-brand" href="#"
             ><code>&lt;--Go to Home page-- &gt;</code></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,22 +35,23 @@
     <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#skills"
                   >Skills</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Me</a>
+                <a class="nav-link" href="#about">About Me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
-      </nav>
+      </nav></div>
+      
       
       <!-- hero section note--- for the small screen make the image a card and flip when touch with the details-->
         <!-- <div class="hero container-fluid bg-dark text-light">
@@ -93,7 +93,7 @@
             </section>
             
       <!-- skills -->
-<section class="container py-4">
+<section id="skills" class="container py-4">
   <div class="row">
     <div class="col">
       <!-- title -->
@@ -132,7 +132,7 @@
   </div>
 </section>
       <!-- projects -->
-<div class="projects py-5 ">
+<div id="projects" class="projects py-5 ">
   <div class="title">
     <span>Projects</span>
   </div>
@@ -224,7 +224,7 @@
  
 </div>
       <!-- About me -->
-<section class="container py-5">
+<section id="about" class="container py-5">
   <div class="title">
     <span>About Me</span>
   </div>
@@ -237,7 +237,7 @@
 </section>
 <!-- contact me -->
 
-<section class="container-fluid contact py-5">
+<section id="contact" class="container-fluid contact py-5">
   <div class="title">
     <span>Contact Me</span>
   </div>
@@ -255,6 +255,7 @@
    <footer class="p-4 text-center">
     Copyright &copy; All Rights Reserved. Made with ❤️ by me 😊.
    </footer>
+   <a id="goup" class="up" href="#navbar"><i class="fa-solid fa-arrow-up"></i></a>
     <!-- As a link -->
 </div>
     <!-- JavaScript Bundle with Popper -->
@@ -263,5 +264,14 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const eml = document.getElementById("goup");
+      eml.style.display="none";
+
+      window.addEventListener("scroll", ()=>{
+        eml.style.display = scrollY > 700 ? "block" : "none" ;
+      });
+    </script>
   </body>
 </html>
